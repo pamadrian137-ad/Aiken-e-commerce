@@ -10030,3 +10030,9 @@ img {
         overflow-x: hidden !important;
     }
 }
+/* MOVE MOBILE HEADER UP SLIGHTLY */
+@media (max-width: 768px) {
+    .header {
+        transform: translateY(-10px) !important;
+    }
+}
