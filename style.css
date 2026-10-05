@@ -9996,3 +9996,38 @@ img {
         object-fit: cover;
     }
 }
+/* =========================================
+   AIKEN — LOCK TOP HEADER ON SCROLL
+   ========================================= */
+
+/* Keep the main AIKEN header locked */
+.header {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    background: #ffffff !important;
+}
+
+/* Keep the announcement bar locked above the header */
+.announcement-bar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 10000 !important;
+    width: 100% !important;
+}
+
+/* Mobile header */
+@media (max-width: 768px) {
+    .header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 9999 !important;
+    }
+
+    .announcement-bar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 10000 !important;
+    }
+}
