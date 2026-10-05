@@ -1,0 +1,1937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AIKEN — Everything You Want</title>
+
+    <meta
+        name="description"
+        content="AIKEN — A premium online marketplace for electronics, fashion, beauty, home, gaming and more."
+    >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- =====================================================
+         HERO IMAGE ARRANGEMENT ONLY
+    ====================================================== -->
+
+    <style>
+
+        /* =====================================================
+           HERO SHOWCASE
+        ====================================================== */
+
+        .hero-showcase {
+            position: relative;
+            min-height: 560px;
+            overflow: visible;
+        }
+
+
+        /* =====================================================
+           HERO ORBITS
+        ====================================================== */
+
+        .hero-orbit {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+
+        .orbit-one {
+            width: 520px;
+            height: 520px;
+        }
+
+
+        .orbit-two {
+            width: 400px;
+            height: 400px;
+        }
+
+
+        /* =====================================================
+           MAIN SMARTWATCH
+        ====================================================== */
+
+        .hero-center-product {
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            width: 520px;
+            height: 520px;
+
+            transform: translate(-50%, -50%);
+
+            z-index: 4;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            animation: smartwatchDance 4.5s ease-in-out infinite;
+        }
+
+
+        .hero-center-product img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            display: block;
+
+            position: relative;
+
+            z-index: 3;
+
+            filter:
+                drop-shadow(0 35px 40px rgba(0, 0, 0, 0.22));
+        }
+
+
+        /* =====================================================
+           GLOW BEHIND SMARTWATCH
+        ====================================================== */
+
+        .hero-center-product .center-glow {
+            position: absolute;
+
+            width: 370px;
+            height: 370px;
+
+            border-radius: 50%;
+
+            z-index: 1;
+
+            background:
+                radial-gradient(
+                    circle,
+                    rgba(37, 99, 235, 0.20),
+                    rgba(37, 99, 235, 0.05) 55%,
+                    transparent 72%
+                );
+
+            animation: glowPulse 4.5s ease-in-out infinite;
+        }
+
+
+        /* =====================================================
+           SMARTWATCH SLIGHT DANCING MOTION
+        ====================================================== */
+
+        @keyframes smartwatchDance {
+
+            0% {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(-2deg)
+                    scale(1);
+            }
+
+            25% {
+                transform:
+                    translate(-50%, calc(-50% - 10px))
+                    rotate(1.5deg)
+                    scale(1.015);
+            }
+
+            50% {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(2deg)
+                    scale(1.025);
+            }
+
+            75% {
+                transform:
+                    translate(-50%, calc(-50% + 10px))
+                    rotate(-1.5deg)
+                    scale(1.015);
+            }
+
+            100% {
+                transform:
+                    translate(-50%, -50%)
+                    rotate(-2deg)
+                    scale(1);
+            }
+
+        }
+
+
+        /* =====================================================
+           GLOW ANIMATION
+        ====================================================== */
+
+        @keyframes glowPulse {
+
+            0% {
+                opacity: 0.65;
+                transform: scale(0.96);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.05);
+            }
+
+            100% {
+                opacity: 0.65;
+                transform: scale(0.96);
+            }
+
+        }
+
+
+        /* =====================================================
+           HEADPHONES REMOVED FROM HERO
+        ====================================================== */
+
+        .hero-showcase .product-one {
+            display: none;
+        }
+
+
+        /* =====================================================
+           LAPTOP REMOVED FROM HERO
+        ====================================================== */
+
+        .hero-showcase .product-two {
+            display: none;
+        }
+
+
+        /* =====================================================
+           SALE CARD — CENTER
+        ====================================================== */
+
+        .hero-showcase .hero-sale {
+
+            position: absolute;
+
+            left: 50%;
+            top: 50%;
+
+            transform:
+                translate(-50%, -50%);
+
+            z-index: 10;
+
+            animation:
+                saleCardFloat
+                3.5s
+                ease-in-out
+                infinite;
+        }
+
+
+        @keyframes saleCardFloat {
+
+            0% {
+                transform:
+                    translate(-50%, -50%);
+            }
+
+            50% {
+                transform:
+                    translate(
+                        -50%,
+                        calc(-50% - 7px)
+                    );
+            }
+
+            100% {
+                transform:
+                    translate(-50%, -50%);
+            }
+
+        }
+
+
+        .hero-sale a {
+            display: inline-block;
+        }
+
+
+        /* =====================================================
+           TABLET / MOBILE
+        ====================================================== */
+
+        @media (max-width: 768px) {
+
+            .hero-showcase {
+
+                min-height: 500px;
+
+            }
+
+
+            .hero-center-product {
+
+                width: 390px;
+                height: 390px;
+
+                left: 50%;
+                top: 47%;
+            }
+
+
+            .hero-center-product .center-glow {
+
+                width: 280px;
+                height: 280px;
+
+            }
+
+
+            .orbit-one {
+
+                width: 400px;
+                height: 400px;
+
+            }
+
+
+            .orbit-two {
+
+                width: 310px;
+                height: 310px;
+
+            }
+
+
+            .hero-showcase .product-one {
+
+                display: none;
+
+            }
+
+
+            .hero-showcase .product-two {
+
+                display: none;
+
+            }
+
+
+            .hero-showcase .hero-sale {
+
+                left: 50%;
+                top: 50%;
+
+            }
+
+        }
+
+
+        /* =====================================================
+           SMALL PHONES
+        ====================================================== */
+
+        @media (max-width: 480px) {
+
+            .hero-showcase {
+
+                min-height: 450px;
+
+            }
+
+
+            .hero-center-product {
+
+                width: 330px;
+                height: 330px;
+
+                top: 46%;
+
+            }
+
+
+            .hero-center-product .center-glow {
+
+                width: 230px;
+                height: 230px;
+
+            }
+
+
+            .orbit-one {
+
+                width: 340px;
+                height: 340px;
+
+            }
+
+
+            .orbit-two {
+
+                width: 260px;
+                height: 260px;
+
+            }
+
+
+            .hero-showcase .product-one {
+
+                display: none;
+
+            }
+
+
+            .hero-showcase .product-two {
+
+                display: none;
+
+            }
+
+
+            .hero-showcase .hero-sale {
+
+                left: 50%;
+                top: 50%;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ANNOUNCEMENT BAR
+===================================================== -->
+
+<div class="announcement">
+
+    <div class="announcement-inner">
+
+        <span>
+            🚚 Free delivery on selected orders
+        </span>
+
+        <div class="announcement-links">
+
+            <a href="#home">
+                Help Center
+            </a>
+
+            <!-- AIKEN APP HOOK: ORDER TRACKING -->
+            <a
+                href="#deals"
+                id="announcementTrackOrder"
+                data-aiken-action="track-order"
+            >
+                Track Order
+            </a>
+
+            <a href="#categories">
+                Sell on AIKEN
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="header">
+
+    <div class="header-main">
+
+        <button
+            type="button"
+            class="mobile-menu"
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+        >
+            ☰
+        </button>
+
+
+        <a
+            href="#home"
+            class="logo"
+        >
+            AIKEN<span>.</span>
+        </a>
+
+
+        <div class="search-box">
+
+            <input
+                type="search"
+                id="searchInput"
+                placeholder="Search products, brands and categories..."
+                autocomplete="off"
+            >
+
+            <button
+                type="button"
+                id="searchBtn"
+                aria-label="Search"
+            >
+                ⌕
+            </button>
+
+            <div
+                class="search-results"
+                id="searchResults"
+            ></div>
+
+        </div>
+
+
+        <div class="header-actions">
+
+            <!-- =================================================
+                 ACCOUNT
+            ================================================== -->
+
+            <button
+                type="button"
+                class="header-action"
+                id="accountBtn"
+                aria-label="Open AIKEN account"
+            >
+
+                <div class="action-icon">
+                    ♙
+                </div>
+
+                <div class="action-text">
+
+                    <small>
+                        Hello, Guest
+                    </small>
+
+                    <strong>
+                        Account
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+            <!-- =================================================
+                 WISHLIST
+            ================================================== -->
+
+            <button
+                type="button"
+                class="header-action wishlist-header"
+                id="wishlistBtn"
+                aria-label="Open wishlist"
+            >
+
+                <div class="action-icon">
+
+                    ♡
+
+                    <span
+                        class="action-badge"
+                        id="wishlistCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+                <div class="action-text">
+
+                    <small>
+                        Your
+                    </small>
+
+                    <strong>
+                        Wishlist
+                    </strong>
+
+                </div>
+
+            </button>
+
+
+            <!-- =================================================
+                 CART
+            ================================================== -->
+
+            <button
+                type="button"
+                class="header-action cart-header"
+                id="cartBtn"
+                aria-label="Open shopping cart"
+            >
+
+                <div class="action-icon">
+
+                    🛒
+
+                    <span
+                        class="action-badge"
+                        id="cartCount"
+                    >
+                        0
+                    </span>
+
+                </div>
+
+                <div class="action-text">
+
+                    <small>
+                        Your
+                    </small>
+
+                    <strong>
+                        Cart
+                    </strong>
+
+                </div>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <nav class="navigation">
+
+        <div class="nav-inner">
+
+            <button
+                type="button"
+                class="categories-button"
+                id="categoriesBtn"
+            >
+
+                <span>
+                    ☰
+                </span>
+
+                All Categories
+
+                <span class="down-arrow">
+                    ⌄
+                </span>
+
+            </button>
+
+
+            <div class="nav-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#deals">
+                    Flash Deals
+                </a>
+
+                <a href="#categories">
+                    Categories
+                </a>
+
+                <a href="#trending">
+                    Trending
+                </a>
+
+                <a href="#new-arrivals">
+                    New Arrivals
+                </a>
+
+                <a href="#best-sellers">
+                    Best Sellers
+                </a>
+
+            </div>
+
+
+            <div class="nav-right">
+
+                <span>
+                    🇰🇪
+                </span>
+
+                Kenya
+
+                <span>
+                    ⌄
+                </span>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================================
+     MOBILE NAVIGATION
+===================================================== -->
+
+<div
+    class="mobile-nav"
+    id="mobileNav"
+>
+
+    <div class="mobile-nav-header">
+
+        <strong>
+            AIKEN<span>.</span>
+        </strong>
+
+        <button
+            type="button"
+            id="closeMobileMenu"
+            aria-label="Close menu"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <a href="#home">
+        Home
+    </a>
+
+    <a href="#deals">
+        Flash Deals
+    </a>
+
+    <a href="#categories">
+        Categories
+    </a>
+
+    <a href="#trending">
+        Trending
+    </a>
+
+    <a href="#new-arrivals">
+        New Arrivals
+    </a>
+
+    <a href="#best-sellers">
+        Best Sellers
+    </a>
+
+    <a href="#home">
+        Help Center
+    </a>
+
+</div>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main id="home">
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero">
+
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+
+            <span></span>
+
+            THE AIKEN MARKETPLACE
+
+        </div>
+
+
+        <h1>
+
+            Everything you want.
+
+            <strong>
+                All in one place.
+            </strong>
+
+        </h1>
+
+
+        <p>
+
+            Discover thousands of products, exclusive deals and
+            everyday essentials, all from one trusted marketplace.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#trending"
+                class="btn btn-primary"
+            >
+
+                Shop Now
+
+                <span>
+                    →
+                </span>
+
+            </a>
+
+
+            <a
+                href="#categories"
+                class="btn btn-outline"
+            >
+
+                Explore Categories
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-trust">
+
+            <div>
+
+                <strong>
+                    10K+
+                </strong>
+
+                <span>
+                    Products
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    5K+
+                </strong>
+
+                <span>
+                    Happy Customers
+                </span>
+
+            </div>
+
+
+            <div>
+
+                <strong>
+                    24/7
+                </strong>
+
+                <span>
+                    Support
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         HERO PRODUCT SHOWCASE
+    ================================================== -->
+
+    <div class="hero-showcase">
+
+
+        <div class="hero-orbit orbit-one"></div>
+
+        <div class="hero-orbit orbit-two"></div>
+
+
+        <div class="hero-center-product">
+
+            <div class="center-glow"></div>
+
+            <img
+                src="images/smartwatch.jpg"
+                alt="Smart Watch Pro"
+            >
+
+        </div>
+
+
+        <div class="hero-sale">
+
+            <small>
+                MEGA SALE
+            </small>
+
+            <strong>
+
+                UP TO
+
+                <br>
+
+                50% OFF
+
+            </strong>
+
+            <a href="#deals">
+                Shop Deals →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICE STRIP
+===================================================== -->
+
+<section class="service-strip">
+
+    <div class="service-item">
+
+        <div class="service-icon">
+            🚚
+        </div>
+
+        <div>
+
+            <strong>
+                Fast Delivery
+            </strong>
+
+            <span>
+                Across Kenya
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="service-item">
+
+        <div class="service-icon">
+            🔒
+        </div>
+
+        <div>
+
+            <strong>
+                Secure Payments
+            </strong>
+
+            <span>
+                100% protected
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="service-item">
+
+        <div class="service-icon">
+            ↩
+        </div>
+
+        <div>
+
+            <strong>
+                Easy Returns
+            </strong>
+
+            <span>
+                Simple & reliable
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <div class="service-item">
+
+        <div class="service-icon">
+            ✓
+        </div>
+
+        <div>
+
+            <strong>
+                Verified Products
+            </strong>
+
+            <span>
+                Shop with confidence
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SHOP BY CATEGORY
+===================================================== -->
+
+<section
+    class="section"
+    id="categories"
+>
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="eyebrow">
+                DISCOVER
+            </span>
+
+            <h2>
+                Shop by Category
+            </h2>
+
+            <p>
+                Explore products across our most popular categories.
+            </p>
+
+        </div>
+
+
+        <a
+            href="#categories"
+            class="view-all"
+        >
+
+            View All
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div class="category-grid">
+
+
+        <button
+            type="button"
+            class="category-card"
+            data-category="Electronics"
+        >
+
+            <div class="category-image electronics">
+
+                <img
+                    src="images/smartphone.jpg"
+                    alt="Electronics"
+                >
+
+            </div>
+
+            <strong>
+                Electronics
+            </strong>
+
+            <span>
+                Smartphones, gadgets & technology
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="category-card"
+            data-category="Fashion"
+        >
+
+            <div class="category-image fashion">
+
+                <img
+                    src="images/handbag.jpg"
+                    alt="Fashion"
+                >
+
+            </div>
+
+            <strong>
+                Fashion
+            </strong>
+
+            <span>
+                Clothing, bags & everyday style
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="category-card"
+            data-category="Beauty"
+        >
+
+            <div class="category-image beauty">
+
+                <img
+                    src="images/beauty.jpg"
+                    alt="Beauty and personal care"
+                >
+
+            </div>
+
+            <strong>
+                Beauty
+            </strong>
+
+            <span>
+                Beauty, skincare & personal care
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="category-card"
+            data-category="Home"
+        >
+
+            <div class="category-image home">
+
+                <img
+                    src="images/sofa.jpg"
+                    alt="Home and Living"
+                >
+
+            </div>
+
+            <strong>
+                Home & Living
+            </strong>
+
+            <span>
+                Furniture, décor & essentials
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="category-card"
+            data-category="Shoes"
+        >
+
+            <div class="category-image shoes">
+
+                <img
+                    src="images/sneakers.jpg"
+                    alt="Shoes"
+                >
+
+            </div>
+
+            <strong>
+                Shoes
+            </strong>
+
+            <span>
+                Sneakers, footwear & more
+            </span>
+
+        </button>
+
+
+        <button
+            type="button"
+            class="category-card"
+            data-category="Gaming"
+        >
+
+            <div class="category-image gaming">
+
+                <img
+                    src="images/gaming-console.jpg"
+                    alt="Gaming"
+                >
+
+            </div>
+
+            <strong>
+                Gaming
+            </strong>
+
+            <span>
+                Consoles, accessories & gaming gear
+            </span>
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FLASH DEALS
+===================================================== -->
+
+<section
+    class="section deals-section"
+    id="deals"
+>
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="eyebrow red">
+                LIMITED TIME
+            </span>
+
+            <h2>
+                Flash Deals 🔥
+            </h2>
+
+            <p>
+                Premium products. Limited prices.
+            </p>
+
+        </div>
+
+
+        <div class="deal-timer">
+
+            <span>
+                ENDS IN
+            </span>
+
+            <div class="timer-boxes">
+
+                <b id="hours">
+                    08
+                </b>
+
+                <i>
+                    :
+                </i>
+
+                <b id="minutes">
+                    42
+                </b>
+
+                <i>
+                    :
+                </i>
+
+                <b id="seconds">
+                    15
+                </b>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="flashProducts"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROMOTIONAL BANNER
+===================================================== -->
+
+<section class="promo-banner">
+
+    <div class="promo-content">
+
+        <span class="eyebrow">
+            AIKEN EXCLUSIVE
+        </span>
+
+
+        <h2>
+            Upgrade your everyday.
+        </h2>
+
+
+        <p>
+
+            Discover premium gadgets, fashion and lifestyle
+            products at prices you'll love.
+
+        </p>
+
+
+        <a
+            href="#trending"
+            class="btn btn-light"
+        >
+
+            Explore Collection →
+
+        </a>
+
+    </div>
+
+
+    <div class="promo-visual">
+
+        <img
+            src="images/laptop.jpg"
+            alt="Premium Laptop"
+        >
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     TRENDING PRODUCTS
+===================================================== -->
+
+<section
+    class="section"
+    id="trending"
+>
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="eyebrow">
+                POPULAR RIGHT NOW
+            </span>
+
+            <h2>
+                Trending Products
+            </h2>
+
+            <p>
+                Products customers are loving right now.
+            </p>
+
+        </div>
+
+
+        <a
+            href="#trending"
+            class="view-all"
+        >
+
+            View All
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="trendingProducts"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     BEST SELLERS
+===================================================== -->
+
+<section
+    class="section light-section"
+    id="best-sellers"
+>
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="eyebrow">
+                CUSTOMER FAVOURITES
+            </span>
+
+            <h2>
+                Best Sellers
+            </h2>
+
+            <p>
+                Popular picks from the AIKEN marketplace.
+            </p>
+
+        </div>
+
+
+        <a
+            href="#trending"
+            class="view-all"
+        >
+
+            Shop Popular
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="bestSellerProducts"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEW ARRIVALS
+===================================================== -->
+
+<section
+    class="section"
+    id="new-arrivals"
+>
+
+    <div class="section-header">
+
+        <div>
+
+            <span class="eyebrow">
+                JUST LANDED
+            </span>
+
+            <h2>
+                New Arrivals
+            </h2>
+
+            <p>
+                Fresh products recently added to AIKEN.
+            </p>
+
+        </div>
+
+
+        <a
+            href="#new-arrivals"
+            class="view-all"
+        >
+
+            See More
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div
+        class="product-grid"
+        id="newProducts"
+    ></div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NEWSLETTER
+===================================================== -->
+
+<section
+    class="newsletter"
+    id="newsletter"
+>
+
+    <div class="newsletter-content">
+
+        <span class="eyebrow">
+            STAY UPDATED
+        </span>
+
+
+        <h2>
+
+            Great deals.
+
+            <br>
+
+            Delivered to you.
+
+        </h2>
+
+
+        <p>
+
+            Get exclusive offers, new arrivals and special
+            AIKEN deals straight to your inbox.
+
+        </p>
+
+    </div>
+
+
+    <form
+        class="newsletter-form"
+        id="newsletterForm"
+    >
+
+        <input
+            type="email"
+            id="emailInput"
+            placeholder="Enter your email address"
+            required
+        >
+
+        <button type="submit">
+            Subscribe
+        </button>
+
+    </form>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =====================================================
+     CART
+===================================================== -->
+
+<aside
+    class="cart-sidebar"
+    id="cartSidebar"
+>
+
+    <div class="cart-header">
+
+        <div>
+
+            <span class="eyebrow">
+                YOUR BAG
+            </span>
+
+            <h2>
+                Shopping Cart
+            </h2>
+
+        </div>
+
+
+        <button
+            type="button"
+            id="closeCart"
+            aria-label="Close shopping cart"
+        >
+            ×
+        </button>
+
+    </div>
+
+
+    <div
+        class="cart-items"
+        id="cartItems"
+    >
+
+        <div class="empty-cart">
+
+            <div>
+                🛒
+            </div>
+
+            <h3>
+                Your cart is empty
+            </h3>
+
+            <p>
+                Start shopping and your products will appear here.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="cart-bottom">
+
+        <div class="cart-total">
+
+            <span>
+                Subtotal
+            </span>
+
+            <strong id="cartTotal">
+                KSh 0
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="checkout-btn"
+            id="checkoutBtn"
+        >
+
+            Proceed to Checkout
+
+            <span>
+                →
+            </span>
+
+        </button>
+
+    </div>
+
+</aside>
+
+
+
+<!-- =====================================================
+     OVERLAY
+===================================================== -->
+
+<div
+    class="overlay"
+    id="overlay"
+></div>
+
+
+
+<!-- =====================================================
+     TOAST
+===================================================== -->
+
+<div
+    class="toast"
+    id="toast"
+>
+
+    <span class="toast-icon">
+        ✓
+    </span>
+
+
+    <div>
+
+        <strong id="toastTitle">
+            Added to cart
+        </strong>
+
+        <p id="toastMessage">
+            Product added successfully.
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+
+        <div class="footer-brand">
+
+            <a
+                href="#home"
+                class="footer-logo"
+            >
+                AIKEN<span>.</span>
+            </a>
+
+
+            <p>
+
+                Everything you want.
+
+                All in one place.
+
+            </p>
+
+
+            <div class="socials">
+
+                <a href="#home">
+                    f
+                </a>
+
+                <a href="#home">
+                    𝕏
+                </a>
+
+                <a href="#home">
+                    ◎
+                </a>
+
+                <a href="#home">
+                    in
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Shop
+            </h4>
+
+            <a href="#categories">
+                Electronics
+            </a>
+
+            <a href="#categories">
+                Fashion
+            </a>
+
+            <a href="#categories">
+                Beauty
+            </a>
+
+            <a href="#categories">
+                Home & Living
+            </a>
+
+            <a href="#categories">
+                Gaming
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Customer Care
+            </h4>
+
+            <a href="#home">
+                Help Center
+            </a>
+
+            <!-- AIKEN APP HOOK: ORDER TRACKING -->
+            <a
+                href="#deals"
+                id="footerTrackOrder"
+                data-aiken-action="track-order"
+            >
+                Track My Order
+            </a>
+
+            <a href="#home">
+                Shipping Information
+            </a>
+
+            <a href="#home">
+                Returns & Refunds
+            </a>
+
+            <a href="#newsletter">
+                Contact Us
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                About AIKEN
+            </h4>
+
+            <a href="#home">
+                About Us
+            </a>
+
+            <a href="#categories">
+                Sell on AIKEN
+            </a>
+
+            <a href="#home">
+                Careers
+            </a>
+
+            <a href="#home">
+                Privacy Policy
+            </a>
+
+            <a href="#home">
+                Terms & Conditions
+            </a>
+
+        </div>
+
+
+
+        <div class="footer-column">
+
+            <h4>
+                Download App
+            </h4>
+
+            <p class="footer-small">
+                Shop faster with the AIKEN app.
+            </p>
+
+
+            <div class="app-buttons">
+
+                <a href="#home">
+
+                    
+
+                    <span>
+
+                        Download on the
+
+                        <strong>
+                            App Store
+                        </strong>
+
+                    </span>
+
+                </a>
+
+
+                <a href="#home">
+
+                    ▶
+
+                    <span>
+
+                        GET IT ON
+
+                        <strong>
+                            Google Play
+                        </strong>
+
+                    </span>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <span>
+            © 2026 AIKEN. All rights reserved.
+        </span>
+
+        <span>
+            Made for modern shoppers.
+        </span>
+
+    </div>
+
+</footer>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+<script src="app.js"></script>
+
+</body>
+
+</html>
